@@ -3,6 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 from .pages.main_page import MainPage
+from .pages.login_page import LoginPage
 
 def test_guest_can_go_to_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com/"
@@ -15,3 +16,10 @@ def test_guest_should_see_login_link(browser):
     page = MainPage(browser, link)
     page.open()
     page.should_be_login_link()
+    
+def test_guest_should_see_login_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/accounts/login/"
+    page = LoginPage(browser, link)
+    page.open()
+    page.should_be_login_page()       # при запуске этого метода будут выполнены все 3 теста из файла login_page.py
+                                      # также, методы можно вызывать по отдельности, чтобы разделить их на разные тесты
