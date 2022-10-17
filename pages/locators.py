@@ -14,3 +14,8 @@ class ProductPageLocators():
     CART_PRICE = (By.CSS_SELECTOR, ".alertinner p strong")
     BOOK_NAME = (By.CSS_SELECTOR, ".col-sm-6.product_main h1")
     BOOK_NAME_CART = (By.CSS_SELECTOR, ".alert:nth-last-child(3)  strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success:nth-child(2)")
+    
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc") #некорректный селектор для проверок

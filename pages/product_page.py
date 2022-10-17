@@ -30,3 +30,11 @@ class ProductPage(BasePage):
         book2 = self.browser.find_element(*ProductPageLocators.BOOK_NAME_CART).text
         print(f"Название книги в корзине:{book2}")
         assert book1 == book2, "The name of the book in the cart does not match the name in the product card"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+        "Success message is presented, but should not be"
+        
+    def should_be_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+        "Success message disappears, but should not be"
