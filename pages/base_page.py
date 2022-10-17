@@ -26,7 +26,13 @@ class BasePage():
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
     def should_be_login_link(self):
-        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"    
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"  
+    def go_to_cart(self):
+        link = self.browser.find_element(*BasePageLocators.CART_HEADER_LINK)
+        link.click()    
+    def cart_not_visible(self):
+        assert self.is_element_present(*BasePageLocators.CART_HEADER_LINK), "Cart button is not presented"
+           
         
     def solve_quiz_and_get_code(self): #решение математической задачи для промо
         alert = self.browser.switch_to.alert
