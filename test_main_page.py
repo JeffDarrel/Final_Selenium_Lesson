@@ -28,8 +28,8 @@ def test_guest_should_see_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com/accounts/login/"
     page = LoginPage(browser, link)
     page.open()
-    page.should_be_login_page()                                      # при запуске этого метода будут выполнены все 3 теста из файла login_page.py
-                                                                     # также, методы можно вызывать по отдельности, чтобы разделить их на разные тесты
+    page.should_be_login_page()                                       # при запуске этого метода будут выполнены все 3 теста из файла login_page.py
+                                                                      # также, методы можно вызывать по отдельности, чтобы разделить их на разные тесты
 def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     link = "http://selenium1py.pythonanywhere.com/"
     page = BasketPage(browser, link)
