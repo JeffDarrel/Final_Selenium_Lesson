@@ -7,6 +7,9 @@ class MainPageLocators():
 class LoginPageLocators():
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+    REG_EMAIL_AREA = (By.CSS_SELECTOR, "#id_registration-email")
+    REG_PASS_AREA1 = (By.CSS_SELECTOR, "#id_registration-password1")
+    REG_PASS_AREA2 = (By.CSS_SELECTOR, "#id_registration-password2")
     
 class ProductPageLocators():
     CART_LINK = (By.CSS_SELECTOR, ".btn-add-to-basket")
@@ -20,3 +23,4 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc") #некорректный селектор для проверок
     CART_HEADER_LINK = (By.CSS_SELECTOR, ".btn-group .btn")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
